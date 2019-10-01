@@ -1,0 +1,95 @@
+//main: ../style.less
+.header {
+    position: relative;
+    @media @mobile {
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        z-index: 1000;
+    }
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 0;
+    align-items: center;
+}
+.user {
+    display: flex;
+}
+.user__avatar {
+    height: 57px;
+    width: 57px;
+    img {
+        border-radius: 50%;
+    }
+}
+.user__name {
+    font-size: 1.06rem;
+    color: @black;
+    font-weight: 700;
+    line-height: 1.2;
+    padding-left: 9px;
+    margin-bottom: 3px;
+}
+.user__prof {
+    font-size: 0.8rem;
+    color:fade(#6a696b, 70%);
+    padding-left: 9px;
+}
+.nav {
+    display: flex;
+   
+}
+.nav__link {
+    padding: 0.66rem 2rem;
+    text-decoration: none;
+    font-size: 0.93rem;
+    color: @black;
+    font-weight: 700;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    &:hover,
+    &.active {
+        border-color: @black;
+    }
+    @media @mobile  {
+        width: 100%;
+        padding: .5rem 1rem;
+        margin-left: 0;
+    }
+}
+.navigation {
+    flex-wrap: wrap;
+    @media @mobile {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        box-shadow: 0 5px 10px rgba(0, 0,0, .3);
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        z-index: 1000;
+        display: none;
+        &.show {
+            display: flex;
+        }
+    }
+}
+.burger {
+   width: 30px;
+   height: 30px;
+   padding: 0;
+   border: 0;
+    background: none;
+}
+.burger__icon {
+    height: auto;
+    display: none;
+    outline: none;
+    @media @mobile {
+        display: block;
+    }
+}

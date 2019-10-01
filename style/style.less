@@ -1,0 +1,41 @@
+//compress: true
+@import "vars";
+
+html {
+    font-size: 15px;
+}
+body {
+    color: @black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+.hide {
+    display: none;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4 ,h5, h6 {
+    margin: 0;
+}
+
+
+@import "slick.less";
+
+
+@import "blocks/intro.less";
+@import "blocks/containers.less";
+@import "blocks/header.less";
+@import "blocks/btn.less";
+@import "blocks/works.less";
+@import "blocks/about.less";
+@import "blocks/reviews.less";
+@import "blocks/news.less";
+@import "blocks/footer.less";
+@import "blocks/modal.less";
+@import "blocks/timeline.less";
